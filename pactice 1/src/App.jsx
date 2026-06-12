@@ -1,27 +1,16 @@
+import Login, { Color, Data, Sayyam } from "./Usercomponents"
+
 function App(){
   return(
 <div>
     <h1>Sayyam</h1>
-    <Fruit />
+    <Login/>
     <Color />
+    <Data />
+    {/* <Sayyam /> */}
+    <h1>{Sayyam}</h1>
     </div>
   )
 }
 
 export default App
-
-function Fruit(){
-  return (
-    <div>
-    <h1>Apple</h1>
-    
-    </div>
-  )
-}
-
-
-function Color(){
-  return (
-    <h1>Red</h1>
-  )
-}
