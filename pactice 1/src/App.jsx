@@ -1,20 +1,14 @@
- const fruit = (name)=>{
-  alert(name);
- }
-
+import { useState } from "react"
+import Counter from "./counter"
 
 function App(){
- function name(){
-alert("name Submitted")
- }
-
-//  const fruit = (name)=>{
-//   alert(name);
-//  }
+const[display, setDisplay]=useState(true)
   return(
 <div>
-   <button onClick={()=>fruit("apple")}>Apple</button>
-   <button onClick={()=>fruit("banana")}>Banana</button>
+  <button onClick={()=>setDisplay(!display)}>Click Me</button>
+{
+  display?<Counter/>:null
+}
     </div>
   )
 }
