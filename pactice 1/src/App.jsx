@@ -1,20 +1,18 @@
 import { useState } from "react"
+import Props from "./props"
 
 
 function App(){
-  const [count, setCount]=useState(0);
+// const objectsub={
+//   name:"Sayyam",age:"29"
+// }
+// const arr=["data", "dsd","sjdgjsa"]
+const[data, setdata]=useState();
   return(
 <div>
-  <h1>{count}</h1>
-  <button onClick={()=>setCount(count+1)}>Click me</button>
-  {
-    count==0?<h1>Coundition 0</h1>
-    :count==1?<h1>Coundition 1</h1>
-    :count==2?<h1>Coundition 2</h1>
-    :count==3?<h1>Coundition 3</h1>
-    :<h1>Other Condition</h1>
-
-  }
+  {/* <h1>{data}</h1> */}
+ {data && <Props dataset={data}/>}
+ <button onClick={()=>setdata("bhaskar")}>Click me</button>
     </div>
   )
 }
