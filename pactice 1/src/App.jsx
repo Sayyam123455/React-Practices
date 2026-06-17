@@ -11,15 +11,9 @@ function App(){
 const[data, setdata]=useState();
   return(
 <div>
-  <User color="red">
-    <h1>Data Entered</h1>
-  </User>
-   <User>
-    <h1>Data Entered</h1>
-  </User>
-   <User>
-    <h1>Data Entered</h1>
-  </User>
+ <input type="text" value={data} onChange={(event)=>setdata(event.target.value)} />
+ <h1>{data}</h1>
+ <button onClick={()=>setdata("")}>Click me</button>
     </div>
   )
 }
