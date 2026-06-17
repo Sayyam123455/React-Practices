@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Props from "./props"
+import User from "./User";
 
 
 function App(){
@@ -10,9 +11,15 @@ function App(){
 const[data, setdata]=useState();
   return(
 <div>
-  {/* <h1>{data}</h1> */}
- {data && <Props dataset={data}/>}
- <button onClick={()=>setdata("bhaskar")}>Click me</button>
+  <User color="red">
+    <h1>Data Entered</h1>
+  </User>
+   <User>
+    <h1>Data Entered</h1>
+  </User>
+   <User>
+    <h1>Data Entered</h1>
+  </User>
     </div>
   )
 }
