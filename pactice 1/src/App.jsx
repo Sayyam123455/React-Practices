@@ -1,37 +1,22 @@
-import { useState } from "react"
-import Skills from "./Skills"
+import { useState } from "react";
+import Clock from "./Clock";
+import "./App.css";
 
+function App() {
+  const [color, setColor] = useState("#00f7ff");
 
+  return (
+    <div className="app">
+      <div className="controls">
+        <button onClick={() => setColor("#00f7ff")}>Cyan</button>
+        <button onClick={() => setColor("#ff00ff")}>Pink</button>
+        <button onClick={() => setColor("#00ff88")}>Green</button>
+        <button onClick={() => setColor("#ffd700")}>Gold</button>
+      </div>
 
-function App(){
- const dataStore=[
-    {
-        Name:"Sayyam",
-        Age:29,
-        Email:"sayyam@test.com",
-        id:1
-    },
-    {
-        Name:"ram",
-        Age:20,
-        Email:"ram@test.com",
-        id:2
-    },
-    {
-        Name:"sham",
-        Age:25,
-        Email:"sham@test.com",
-        id:3
-    }
- ]
-  return(
-<div>{
-  dataStore.map((user)=>(
-  <Skills user={user}/>
-  ))
-}
+      <Clock color={color} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

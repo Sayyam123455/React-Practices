@@ -1,42 +1,129 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+    -45deg,
+    #0f172a,
+    #1e293b,
+    #312e81,
+    #0f172a
+  );
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+}
+
+.clock-card {
+  position: relative;
+  width: 650px;
+  padding: 50px;
   text-align: center;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.clock-card h2 {
+  color: white;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.time {
+  font-size: 5rem;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+.clock-card p {
+  color: #d1d5db;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.status {
+  margin-top: 25px;
+  color: #00ff88;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+
+.controls {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.controls button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  transform: translateY(-3px);
+}
+
+.glow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(0, 247, 255, 0.15);
+  border-radius: 50%;
+  filter: blur(100px);
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes pulse {
+  50% {
+    transform: scale(1.6);
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
