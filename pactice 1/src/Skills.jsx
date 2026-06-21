@@ -1,33 +1,26 @@
 import { useState } from "react"
 
 function Skills(){
-    const [data, setdata]=useState("");
-    const print=(event)=>{
-console.log(event.target.value, event.target.checked);
-if(event.target.checked){
-    setdata([...data, event.target.value])
-}else{
+   const[gender, setGender]=useState("female");
+   const[city, setCity]=useState("noida");
 
-    setdata([...data.filter((item)=>item!=event.target.value) ])
-}
-
-    }
     return(
         <>
-        <input onChange={print} type="checkbox" id="php" value="php" />
-        <label htmlFor="php">PHP</label>
-        <br/><br/>
-        <input onChange={print}  type="checkbox" id="js" value="js" />
-        <label htmlFor="js">JS</label>
-        <br/><br/>
-        <input onChange={print}  type="checkbox" id="node" value="node" />
-        <label htmlFor="node">NODE</label>
-        <br/><br/>
-        <input onChange={print}  type="checkbox" id="java" value="java" />
-        <label htmlFor="java">java</label>
-        <br/><br/>
-        <h1>{data}</h1>
-        </>
+        <input type="radio" onChange={(event)=>setGender(event.target.value)} value={"male"} name="gender" checked={gender == "male"} id="male"/>
+        <label htmlFor="male">Male</label>
+        <input type="radio"  onChange={(event)=>setGender(event.target.value)} value={"female"} name="gender" checked={gender == "female"} id="female"/>
+        <label htmlFor="female">Female</label>
+        <h5>Gender Name: {gender}</h5>
+        <br />
+        <br />
+        <br />
+        <select name="city" onChange={(event)=>setCity(event.target.value)} id="city" defaultValue="gurgram">
+            <option value="delhi">delhi</option>
+            <option value="noida">noida</option>
+            <option value="gurgram">gurgram</option>
+        </select>
+        <h5>Selected City: {city}</h5>
+                </>
     )
 
 }
