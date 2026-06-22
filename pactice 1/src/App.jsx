@@ -1,21 +1,54 @@
 import { useState } from "react";
-import Clock from "./Clock";
-import "./App.css";
+import Collage from "./Collage";
+
 
 function App() {
-  const [color, setColor] = useState("#00f7ff");
+  const CollageData =[
+    {
+      name:"IET",
+      website:"iet.com",
+      city:"delhi",
+      student:[
+        {
+          name:"sayyam",
+          age:"29",
+          email:"Sayyam@test.com"
+        }
+      ]
+    },
+    {
+      name:"IIT",
+      website:"iit.com",
+      city:"delhi",
+      student:[
+        {
+          name:"Akshit",
+          age:"29",
+          email:"akshit@test.com"
+        }
+      ]
+    },
+    {
+      name:"MIT",
+      website:"mit.com",
+      city:"delhi",
+      student:[
+        {
+          name:"rohit",
+          age:"29",
+          email:"rohit@test.com"
+        }
+      ]
+    }
 
+  ]
   return (
-    <div className="app">
-      <div className="controls">
-        <button onClick={() => setColor("#00f7ff")}>Cyan</button>
-        <button onClick={() => setColor("#ff00ff")}>Pink</button>
-        <button onClick={() => setColor("#00ff88")}>Green</button>
-        <button onClick={() => setColor("#ffd700")}>Gold</button>
-      </div>
+<>
+<Collage collage={CollageData}/>
 
-      <Clock color={color} />
-    </div>
+
+</>
+
   );
 }
 
