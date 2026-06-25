@@ -1,27 +1,17 @@
 import { useEffect, useState } from "react";
+import Count from "./Count";
 
 
 
 function App() {
-const[counter, setCounter]=useState()
-const[data, setData]=useState()
-useEffect(()=>{
+const[counter, setCounter]=useState(0)
+const[data, setData]=useState(0)
 
-},[])
- function Counter(){
-  console.log("counter publish");
-  
- }
- Counter()
- function Data(){
-  console.log("Data publish");
-  
- }
   return (
 <>
-
-<button onClick={()=>setCounter(Counter)}>Counter</button>
-<button onClick={()=>setData(Data)}>Data</button>
+<Count count={counter} data={data}/>
+<button onClick={()=>setCounter(counter+1)}>Counter</button>
+<button onClick={()=>setData(data+1)}>Data</button>
 
 </>
 
