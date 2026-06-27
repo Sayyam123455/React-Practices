@@ -1,14 +1,23 @@
 import { useEffect } from "react";
 
 function Count({count, data}){
-    function counter(){
-        console.log("counter called");
-        
-    }
+   
     
     useEffect(()=>{
-       counter(); 
+      console.log("birth");
+      
+    },[])
+     useEffect(()=>{
+      console.log("groeth");
+      
     },[count])
+    useEffect(()=>{
+        return()=>{
+      console.log("delete");
+
+        }
+      
+    },[])
     return(
         <div>
             <h1>{count}</h1>
