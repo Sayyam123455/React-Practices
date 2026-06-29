@@ -4,20 +4,42 @@ import Count from "./Count";
 
 
 function App() {
-const[counter, setCounter]=useState(0)
-const[data, setData]=useState(0)
-const[display, setdisplay]=useState(true)
+
 
   return (
 <>
-{
-display ? <Count count={counter} data={data}/>:null
-  
-}
-<button onClick={()=>setCounter(counter+1)}>Counter</button>
-<button onClick={()=>setData(data+1)}>Data</button>
-<button onClick={()=>setdisplay(!display)}>Toggle</button>
-
+<div style={{display:"flex"}}>
+<div style={{border:"1px solid #000", boxShadow: "0px 0px 15px -8px", width: "200px", margin:"20px"}}>
+  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
+  <h2>Sayam</h2>
+  <p>react developer</p>
+</div>
+<div style={{border:"1px solid #000", boxShadow: "0px 0px 15px -8px", width: "200px", margin:"20px"}}>
+  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
+  <h2>Sayam</h2>
+  <p>react developer</p>
+</div>
+<div style={{border:"1px solid #000", boxShadow: "0px 0px 15px -8px", width: "200px", margin:"20px"}}>
+  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
+  <h2>Sayam</h2>
+  <p>react developer</p>
+</div>
+<div style={{border:"1px solid #000", boxShadow: "0px 0px 15px -8px", width: "200px", margin:"20px"}}>
+  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
+  <h2>Sayam</h2>
+  <p>react developer</p>
+</div>
+<div style={{border:"1px solid #000", boxShadow: "0px 0px 15px -8px", width: "200px", margin:"20px"}}>
+  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
+  <h2>Sayam</h2>
+  <p>react developer</p>
+</div>
+<div style={{border:"1px solid #000", boxShadow: "0px 0px 15px -8px", width: "200px", margin:"20px"}}>
+  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
+  <h2>Sayam</h2>
+  <p>react developer</p>
+</div>
+</div>
 </>
 
   );
