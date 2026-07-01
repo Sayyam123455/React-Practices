@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Count from "./Count";
+import Card from "./Card";
 
 
 
@@ -14,41 +15,7 @@ function changebg(color){
 
   return (
 <>
-<button onClick={()=>setGrid(!grid)}>Toggle</button>
-<button onClick={()=>changebg("#ccc")}>Grey Button</button>
-<button onClick={()=>changebg("#fff")}>Default Button</button>
-<div style={{display:grid?"flex":"block"}}>
-<div style={bgcolors}>
-  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
-  <h2>Sayam</h2>
-  <p>react developer</p>
-</div>
-<div style={bgcolors}>
-  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
-  <h2>Sayam</h2>
-  <p>react developer</p>
-</div>
-<div style={bgcolors}>
-  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
-  <h2>Sayam</h2>
-  <p>react developer</p>
-</div>
-<div style={bgcolors}>
-  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
-  <h2>Sayam</h2>
-  <p>react developer</p>
-</div>
-<div style={bgcolors}>
-  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
-  <h2>Sayam</h2>
-  <p>react developer</p>
-</div>
-<div style={bgcolors}>
-  <img style={{width:"200px"}} src="https://st3.depositphotos.com/1350793/14897/i/450/depositphotos_148976937-stock-photo-demo-concept-with-hand.jpg" alt="" />
-  <h2>Sayam</h2>
-  <p>react developer</p>
-</div>
-</div>
+<Card />
 </>
 
   );
