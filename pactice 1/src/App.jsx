@@ -1,21 +1,17 @@
-import { useEffect, useState } from "react";
-import Count from "./Count";
-import Card from "./Card";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+import { Alert, Button } from 'react-bootstrap';
 
 function App() {
-const[bgcolors, setBgcolor]=useState({  border:"1px solid #000", boxShadow: "0px 0px 15px -8px", width: "200px", margin:"20px"})
-const[grid, setGrid]=useState(true)
-
-function changebg(color){
-    setBgcolor({...bgcolors, backgroundColor:color})
-}
 
 
   return (
 <>
-<Card />
+ <Alert variant="danger">
+          This is a red alert—check it out!
+        </Alert>
+        <Button variant="info">Info</Button>
+      <Button variant="light">Light</Button>
 </>
 
   );
