@@ -2,23 +2,39 @@ import { useRef } from "react";
 
 
 function App() {
-const inputref=useRef(null)
-function placeholder(){
-  inputref.current.placeholder="Password"
+  const userRef=useRef(null);
+
+
+const handleform=(event)=>{
+event.preventDefault();
+const user = document.querySelector("#user").value;
+const password = document.querySelector("#password").value;
+console.log(user, password);
+
 }
-function toggle(){
-  if( inputref.current.style.display!="none"){
-  inputref.current.style.display="none"}
-  else{
-    inputref.current.style.display="inline"
-  }
+const handleformRef=(event)=>{
+event.preventDefault();
+const usref=userRef.current.value;
+console.log(usref);
+
+
 }
   return (
 <>
-<button onClick={toggle}>toggle</button>
+<form action="" method="post" onSubmit={handleform}>
+  <input type="text" name="" id="user" />
+  <input type="text" name="" id="password" />
+  <button>Submit</button>
+</form>
 
-<input ref={inputref} type="text" placeholder="enter your name" />
-<button onClick={placeholder}>Change</button>
+<hr>
+</hr>
+
+<form action="" method="post" onSubmit={handleformRef}>
+  <input type="text" ref={userRef} name="" id="userref" />
+  <input type="text" name="" id="passwordref" />
+  <button>Submit with ref</button>
+</form>
 </>
 
   );
