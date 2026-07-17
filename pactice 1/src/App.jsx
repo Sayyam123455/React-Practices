@@ -1,40 +1,18 @@
 import { useRef } from "react";
+import UserRef from "./userref";
 
 
 function App() {
-  const userRef=useRef(null);
-
-
-const handleform=(event)=>{
-event.preventDefault();
-const user = document.querySelector("#user").value;
-const password = document.querySelector("#password").value;
-console.log(user, password);
-
-}
-const handleformRef=(event)=>{
-event.preventDefault();
-const usref=userRef.current.value;
-console.log(usref);
-
-
+  const inputRef=useRef(null);
+function DataTransferItem(){
+inputRef.current.value=1000
+inputRef.current.focus()
 }
   return (
 <>
-<form action="" method="post" onSubmit={handleform}>
-  <input type="text" name="" id="user" />
-  <input type="text" name="" id="password" />
-  <button>Submit</button>
-</form>
-
-<hr>
-</hr>
-
-<form action="" method="post" onSubmit={handleformRef}>
-  <input type="text" ref={userRef} name="" id="userref" />
-  <input type="text" name="" id="passwordref" />
-  <button>Submit with ref</button>
-</form>
+<h1>forward ref</h1>
+<UserRef ref={inputRef}/>
+<button onClick={DataTransferItem}>Update Ref</button>
 </>
 
   );
